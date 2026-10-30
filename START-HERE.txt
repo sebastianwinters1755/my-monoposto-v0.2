@@ -1,0 +1,104 @@
+RACE ENGINEER  -  TEST VERSION 0.2
+===================================
+
+What this is
+------------
+A READING TEST. It watches Monoposto on your tablet and shows what it can read
+(positions, gaps, tyres, flags, penalties, pit stops, tyre wear...). It does not
+talk and gives no advice yet. The goal is to find out how well it reads your game.
+
+You do NOT need Android Studio, Git or any command line.
+You only need your web browser (Chrome or Edge) and your GitHub account.
+
+
+PART A - Put the project on GitHub (one time)
+---------------------------------------------
+1. Right-click the ZIP file you downloaded and choose "Extract All...", then "Extract".
+   Open the extracted folder. Inside you will see a folder called "RaceEngineer".
+
+2. Open the "RaceEngineer" folder. You should see these items:
+       .github     app     build.gradle.kts     gradle.properties     settings.gradle.kts
+   (".github" starts with a dot. That is normal. It must be there.)
+
+3. In your browser go to  github.com  and sign in.
+
+4. Top right, click the  +  button, then  "New repository".
+      - Repository name:  race-engineer
+      - Choose  "Private"
+      - Do NOT tick any other boxes
+   Click the green  "Create repository"  button.
+
+5. On the next page, click the blue link  "uploading an existing file".
+
+6. Go back to the "RaceEngineer" folder in File Explorer. Press Ctrl+A to select
+   EVERYTHING inside it, then drag it all onto the browser page where it says
+   "Drag files here to add them to your repository".
+   Wait until the upload finishes. In the list you MUST see:
+       .github/workflows/build.yml
+       app/src/main/AndroidManifest.xml
+       (and several .kt files under app/src/main/java/com/raceengineer/app/)
+   If you do not see ".github/workflows/build.yml", use the backup method at the
+   bottom of this file.
+
+7. Scroll down and click the green  "Commit changes"  button.
+
+
+PART B - Let GitHub build the app (5 to 10 minutes)
+---------------------------------------------------
+1. Click the  "Actions"  tab at the top of your repository.
+   If you see a green button "I understand my workflows, go ahead and enable them",
+   click it.
+2. You will see a run called "Build Race Engineer APK" with a spinning yellow dot.
+   Wait until it turns into a GREEN TICK.
+3. If it turns into a RED CROSS: click it, click "build" on the left, click the step
+   that has the red mark, and take a screenshot. Send me that screenshot and I will
+   fix it. This can happen on a first build and is normal.
+4. When it is green: click the run (its name), scroll down to "Artifacts", and click
+   "RaceEngineer-APK". A ZIP downloads. Extract it. Inside is  app-debug.apk .
+
+
+PART C - Install on the tablet
+------------------------------
+1. Move app-debug.apk to the tablet (email it to yourself, Google Drive, or USB cable).
+2. On the tablet open the file. If Android says it cannot install from this source,
+   tap "Settings" and switch on "Allow from this source", go back and install.
+3. If Play Protect shows a warning, tap "More details", then "Install anyway".
+   (It warns because the app is not from the Play Store.)
+
+
+PART D - The test
+-----------------
+1. Open "Race Engineer" and tap  START.
+2. First time only: it sends you to a settings page. Switch ON "Allow display over
+   other apps" for Race Engineer, go back, and tap START again. Allow notifications.
+3. Android asks to share your screen. Choose  "Entire screen"  and tap "Start now".
+4. Open Monoposto and start a race.
+5. A small box appears at the BOTTOM-LEFT of the screen showing what the app reads.
+6. To keep a picture and its reading for checking:
+      - pull down the notification shade and tap  "Save snapshot", or
+      - in Race Engineer tap  "SNAPSHOT IN 8 s"  and switch to the game.
+   Take snapshots in different situations: normal lap, start of a lap when the full
+   table opens, yellow flag, penalty, in the pit lane, after a pit stop, and in both
+   camera views.
+7. When you come back to Race Engineer you can see the last reading from the game.
+   Tap STOP when you are finished.
+
+
+PART E - What to send me
+------------------------
+- The snapshots. Open the "My Files" app on the tablet:
+      Images  >  RaceEngineer      (the pictures)
+      Downloads  >  RaceEngineer   (the matching .txt readings)
+  Send me 4 or 5 pairs (picture + text file with the same date and time).
+- A screenshot of the Race Engineer screen after a race.
+- Tell me anything odd: lag, heat, the game stuttering, the box in a strange place.
+
+
+BACKUP METHOD if ".github" did not upload
+-----------------------------------------
+1. In your repository click  "Add file"  >  "Create new file".
+2. In the name box type exactly:   .github/workflows/build.yml
+   (typing the slashes creates the folders automatically)
+3. Open the file  build.yml-backup.txt  (next to this file), copy everything, and paste
+   it into the big text box on GitHub.
+4. Click  "Commit changes"  (twice if asked) and continue with Part B.
